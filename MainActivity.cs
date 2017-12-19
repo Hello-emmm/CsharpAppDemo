@@ -114,9 +114,9 @@ namespace moneyShow
 			//        }
 
 			//        // Binding Datata
-			//        var txtName = e.View.FindViewById<TextView>(Resource.Id.textView1);
-			//        var txtAge = e.View.FindViewById<TextView>(Resource.Id.textView2);
-			//        var txtEmail = e.View.FindViewById<TextView>(Resource.Id.textView3);
+			        //var txtName = e.View.FindViewById<TextView>(Resource.Id.textView1);
+			        //var txtAge = e.View.FindViewById<TextView>(Resource.Id.textView2);
+			        //var txtEmail = e.View.FindViewById<TextView>(Resource.Id.textView3);
 
 			//        edtName.Text = txtName.Text;
 			//        edtName.Tag = e.Id;
@@ -134,9 +134,9 @@ namespace moneyShow
 		}
 		private void LoadData()
 		{
-			lstSource = db.selectTablePerson();
-			var adapter = new ListViewAdapter(this, lstSource);
-			lstData.Adapter = adapter;
+			//List<Money> list = db.SelectYear(1);
+			//var adapter = new ListViewAdapter(this, lstSource);
+			//lstData.Adapter = adapter;
 		}
     }
 }

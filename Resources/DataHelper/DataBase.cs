@@ -28,6 +28,23 @@ namespace moneyShow.Resources.DataHelper
 			set { _endDate = value; }
 		}
 
+		public bool CreateDataBase()
+		{
+			try
+			{
+				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+				{
+					connection.CreateTable<Money>();
+					return true;
+				};
+			}
+			catch (SQLiteException ex)
+			{
+				Log.Info("SQLiteEx", ex.Message);
+				return false;
+			}
+		}
+
         public List<Money> SelectMonth(int month){
             try
             {
@@ -265,7 +282,6 @@ namespace moneyShow.Resources.DataHelper
 				return null;
 			}
         }
-
 
 
 
