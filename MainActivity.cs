@@ -33,90 +33,111 @@ namespace moneyShow
             db.CreateDataBase();
 
             //System.IO.File.Delete("/data/user/0/com.hello_emmm.moneyShow/files");
-			string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             Log.Info("DB_PATH", folder);
 
+            var todayin = FindViewById<TextView>(Resource.Id.todayin);
+            var todayout = FindViewById<TextView>(Resource.Id.todayout);
+            var todayleft = FindViewById<TextView>(Resource.Id.todayleft);
+            var latestin = FindViewById<TextView>(Resource.Id.latestin);
+            var latestout = FindViewById<TextView>(Resource.Id.latestout);
+            var monthin = FindViewById<TextView>(Resource.Id.monthin);
+            var monthout = FindViewById<TextView>(Resource.Id.monthout);
+            var weekin = FindViewById<TextView>(Resource.Id.weekin);
+            var weekout = FindViewById<TextView>(Resource.Id.weekout);
 
-            lstData = FindViewById<ListView>(Resource.Id.listView);
+            var btnAddRecord = FindViewById<Button>(Resource.Id.addrecord);
 
-            var edtName = FindViewById<EditText>(Resource.Id.edtName);
-            var edtAge = FindViewById<EditText>(Resource.Id.edtAge);
-            var edtEmail = FindViewById<EditText>(Resource.Id.edtEmail);
-            // Get our button from the layout resource,
-            // and attach an event to it
-            Button btnAdd = FindViewById<Button>(Resource.Id.btnAdd);
-            Button btnEdit = FindViewById<Button>(Resource.Id.btnEdit);
-            Button btnDelete = FindViewById<Button>(Resource.Id.btnDelete);
 
-            // LoadData 18：20
             LoadData();
 
-            //Event
-            btnAdd.Click += delegate
-            {
-                Person person = new Person()
-                {
-                    Name = edtName.Text,
-                    Age = int.Parse(edtAge.Text),
-                    Email = edtEmail.Text
-                };
-                db.InsertIntoTablePerson(person);
-                LoadData();
-            };
+			//lstData = FindViewById<ListView>(Resource.Id.listView);
 
-            btnEdit.Click += delegate
-            {
-                Person person = new Person()
-                {
-                    ID = int.Parse(edtName.Tag.ToString()),
-                    Name = edtName.Text,
-                    Age = int.Parse(edtAge.Text),
-                    Email = edtEmail.Text
-                };
-                db.updateTablePerson(person);
-                LoadData();
-            };
+			//var edtName = FindViewById<EditText>(Resource.Id.edtName);
+			//var edtAge = FindViewById<EditText>(Resource.Id.edtAge);
+			//var edtEmail = FindViewById<EditText>(Resource.Id.edtEmail);
+			// Get our button from the layout resource,
+			// and attach an event to it
+			//Button btnAdd = FindViewById<Button>(Resource.Id.btnAdd);
+			//Button btnEdit = FindViewById<Button>(Resource.Id.btnEdit);
+			//Button btnDelete = FindViewById<Button>(Resource.Id.btnDelete);
 
-            btnDelete.Click += delegate
-            {
-                Person person = new Person()
-                {
-                    ID = int.Parse(edtName.Tag.ToString()),
-                    Name = edtName.Text,
-                    Age = int.Parse(edtAge.Text),
-                    Email = edtEmail.Text
-                };
-                db.deleteTablePerson(person);
-                LoadData();
-            };
+			// LoadData 18：20
+			//LoadData();
 
-            lstData.ItemClick += (s,e) =>{
-                // Set background for selected item
-                for (int i = 0; i < lstData.Count;i++){
-                    if(e.Position == i)
-                        lstData.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.DarkGray);
-                    else
-                        lstData.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.Transparent);
-                }
+			//Event
+			//    btnAdd.Click += delegate
+			//    {
+			//        Person person = new Person()
+			//        {
+			//            Name = edtName.Text,
+			//            Age = int.Parse(edtAge.Text),
+			//            Email = edtEmail.Text
+			//        };
+			//        db.InsertIntoTablePerson(person);
+			//        LoadData();
+			//    }; 
 
-                // Binding Datata
-                var txtName = e.View.FindViewById<TextView>(Resource.Id.textView1);
-                var txtAge = e.View.FindViewById<TextView>(Resource.Id.textView2);
-                var txtEmail = e.View.FindViewById<TextView>(Resource.Id.textView3);
+			//    btnEdit.Click += delegate
+			//    {
+			//        Person person = new Person()
+			//        {
+			//            ID = int.Parse(edtName.Tag.ToString()),
+			//            Name = edtName.Text,
+			//            Age = int.Parse(edtAge.Text),
+			//            Email = edtEmail.Text
+			//        };
+			//        db.updateTablePerson(person);
+			//        LoadData();
+			//    };
 
-                edtName.Text = txtName.Text;
-                edtName.Tag = e.Id;
+			//    btnDelete.Click += delegate
+			//    {
+			//        Person person = new Person()
+			//        {
+			//            ID = int.Parse(edtName.Tag.ToString()),
+			//            Name = edtName.Text,
+			//            Age = int.Parse(edtAge.Text),
+			//            Email = edtEmail.Text
+			//        };
+			//        db.deleteTablePerson(person);
+			//        LoadData();
+			//    };
 
-                edtAge.Text = txtAge.Text;
-                edtEmail.Text = txtEmail.Text;
-            };
-        }
+			//    lstData.ItemClick += (s,e) =>{
+			//        // Set background for selected item
+			//        for (int i = 0; i < lstData.Count;i++){
+			//            if(e.Position == i)
+			//                lstData.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.DarkGray);
+			//            else
+			//                lstData.GetChildAt(i).SetBackgroundColor(Android.Graphics.Color.Transparent);
+			//        }
 
-        private void LoadData(){
-            lstSource = db.selectTablePerson();
-            var adapter = new ListViewAdapter(this, lstSource);
-            lstData.Adapter = adapter;
-        }
+			//        // Binding Datata
+			//        var txtName = e.View.FindViewById<TextView>(Resource.Id.textView1);
+			//        var txtAge = e.View.FindViewById<TextView>(Resource.Id.textView2);
+			//        var txtEmail = e.View.FindViewById<TextView>(Resource.Id.textView3);
+
+			//        edtName.Text = txtName.Text;
+			//        edtName.Tag = e.Id;
+
+			//        edtAge.Text = txtAge.Text;
+			//        edtEmail.Text = txtEmail.Text;
+			//    };
+			//}
+
+			//private void LoadData(){
+			//    lstSource = db.selectTablePerson();
+			//    var adapter = new ListViewAdapter(this, lstSource);
+			//    lstData.Adapter = adapter;
+			//}
+		}
+		private void LoadData()
+		{
+			lstSource = db.selectTablePerson();
+			var adapter = new ListViewAdapter(this, lstSource);
+			lstData.Adapter = adapter;
+		}
     }
 }
 

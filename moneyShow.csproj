@@ -74,6 +74,8 @@
     <Compile Include="Resources\model\Person.cs" />
     <Compile Include="Resources\DataHelper\DataBase.cs" />
     <Compile Include="Resources\ListViewAdapter.cs" />
+    <Compile Include="Resources\model\Money.cs" />
+    <Compile Include="Resources\DataHelper\DateTimeExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

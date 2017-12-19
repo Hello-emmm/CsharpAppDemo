@@ -1,1 +1,44 @@
-<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"><EditText android:hint="Enter your Name" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/edtName" /><EditText android:hint="Enter your Age" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/edtAge" /><EditText android:hint="Enter your Email" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/edtEmail" /><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal"><Button android:id="@+id/btnAdd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:layout_weight="1" /><Button android:id="@+id/btnEdit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Edit" android:layout_weight="1" /><Button android:id="@+id/btnDelete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delete" android:layout_weight="1" /></LinearLayout><ListView android:minWidth="25px" android:minHeight="25px" android:layout_width="match_parent" android:layout_height="match_parent" android:id="@+id/listView" /></LinearLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"><EditText android:inputType="date" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/todaydate" android:text="日期" /><TextView android:text="本日支出金额" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/todayout" /><TextView android:text="本日收入金额" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/todayin" /><TextView android:text="本月余额" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/todayleft" /><Button android:text="Button" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/addrecord" /><TextView android:text="最近一笔（收入）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/latestin" /><TextView android:text="最近一笔（支出）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/latestout" /><TextView android:text="本周（收入）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/weekin" /><TextView android:text="本周（支出）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/weekout" /><TextView android:text="本月（收入）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/monthin" /><TextView android:text="本月（支出）" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/monthout" /><!--    <EditText
+        android:hint="Enter your Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtName" />
+    <EditText
+        android:hint="Enter your Age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtAge" />
+    <EditText
+        android:hint="Enter your Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtEmail" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView" />--></LinearLayout>
