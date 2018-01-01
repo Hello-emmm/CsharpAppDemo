@@ -35,6 +35,11 @@ namespace moneyShow.Resources.DataHelper
 				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
 				{
 					connection.CreateTable<Money>();
+                    connection.CreateTable<Budget>();
+                    Budget initial = new Budget();
+                    initial.init = 1000;
+                    initial.budget = 1000;
+                    connection.Insert(initial);
 					return true;
 				};
 			}
@@ -283,21 +288,118 @@ namespace moneyShow.Resources.DataHelper
 			}
         }
 
+		public bool InsertIntoTableMoney(Money money)
+		{
+		  try
+		  {
+		      using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+		      {
+                    if(money.type == 0){
+                        money.current = QueryBudget()[2] + money.cost;
+                    }else{
+                        money.current = QueryBudget()[2] - money.cost;
+                    }
+                    UpdateBudgetCurrent(money.current); // 改变Budget表的Current值
+		            connection.Insert(money);
+		            return true;
+		      };
+		  }
+		  catch (SQLiteException ex)
+		  {
+		      Log.Info("SQLiteEx", ex.Message);
+		      return false;
+		  }
+		}
+
+        public float[] QueryBudget()
+        {
+			try
+			{
+				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+				{
+					float[] budgetinfo = new float[4];
+                    float current = connection.ExecuteScalar<float>("SELECT current FROM Budget;");
+                    float budget = connection.ExecuteScalar<float>("SELECT budget FROM Budget;");
+                    float init = connection.ExecuteScalar<float>("SELECT init FROM Budget;");
+                    float left = connection.ExecuteScalar<float>("SELECT left FROM Budget;");
+					budgetinfo[0] = budget;
+					budgetinfo[1] = init;
+                    budgetinfo[2] = current;
+                    budgetinfo[3] = left;
+					return budgetinfo;
+                }
+			}
+			catch (SQLiteException ex)
+			{
+				Log.Info("SQLiteEx", ex.Message);
+				return null;
+			}
+        }
+
+        private bool UpdateBudgetCurrent(float current)
+        {
+			  try
+			  {
+			      using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+			      {
+                    connection.Query<Budget>("UPDATE Budget set current=?;",current);
+			          return true;
+			      };
+			  }
+			  catch (SQLiteException ex)
+			  {
+			      Log.Info("SQLiteEx", ex.Message);
+			      return false;
+			  }
+		}
+
+        public float BudgetAndCurrent(){
+			try
+			{
+				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+				{
+					float left = connection.ExecuteScalar<float>("SELECT budgetleft FROM Budget;");
+                    return left; // = budget + current 如果大于0说明还没超预算
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				Log.Info("SQLiteEx", ex.Message);
+				return 0;
+			}
+        }
+		public float InitAndCurrent()
+		{
+			try
+			{
+				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
+				{
+					float left = connection.ExecuteScalar<float>("SELECT actualleft FROM Budget;");
+					return left; // = budget + current 如果大于0说明还没超预算
+				}
+			}
+			catch (SQLiteException ex)
+			{
+				Log.Info("SQLiteEx", ex.Message);
+				return 0;
+			}
+		}
 
 
-		
-  //      public bool CreateDataBase(){
-  //          try{
-  //              using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder,"Persons.db"))){
-  //                  connection.CreateTable<Person>();
-  //                  return true;
-  //              } ;
-  //          }
-  //          catch(SQLiteException ex){
-  //              Log.Info("SQLiteEx", ex.Message);
-  //              return false;
-  //          }
-  //      }
+
+
+		//      public bool CreateDataBase(){
+		//          try{
+		//              using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder,"Persons.db"))){
+		//                  connection.CreateTable<Person>();
+		//                  return true;
+		//              } ;
+		//          }
+		//          catch(SQLiteException ex){
+		//              Log.Info("SQLiteEx", ex.Message);
+		//              return false;
+		//          }
+		//      }
 
 		//public bool InsertIntoTablePerson(Person person)
 		//{
@@ -356,7 +458,7 @@ namespace moneyShow.Resources.DataHelper
 		//		using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Persons.db")))
 		//		{
 		//			connection.Delete(person);
-  //                  return true;
+		//                  return true;
 		//		};
 		//	}
 		//	catch (SQLiteException ex)
@@ -382,5 +484,5 @@ namespace moneyShow.Resources.DataHelper
 		//		return false;
 		//	}
 		//}
-    }
+	}
 }

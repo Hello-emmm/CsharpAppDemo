@@ -76,6 +76,7 @@
     <Compile Include="Resources\ListViewAdapter.cs" />
     <Compile Include="Resources\model\Money.cs" />
     <Compile Include="Resources\DataHelper\DateTimeExtensions.cs" />
+    <Compile Include="Resources\model\Budget.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -92,6 +93,8 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\list_view_dataTemplate.axml" />
+    <AndroidResource Include="Resources\layout\Main1.axml" />
+    <AndroidResource Include="Resources\layout\Main2.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

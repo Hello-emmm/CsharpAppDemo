@@ -1426,8 +1426,8 @@ namespace moneyShow
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c005e
-			public const int action0 = 2131492958;
+			// aapt resource value: 0x7f0c0083
+			public const int action0 = 2131492995;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int action_bar = 2131492929;
@@ -1453,8 +1453,8 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c0042
 			public const int action_context_bar = 2131492930;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int action_divider = 2131492962;
+			// aapt resource value: 0x7f0c0087
+			public const int action_divider = 2131492999;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1486,17 +1486,29 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c0018
 			public const int beginning = 2131492888;
 			
+			// aapt resource value: 0x7f0c0060
+			public const int button1 = 2131492960;
+			
 			// aapt resource value: 0x7f0c002b
 			public const int buttonPanel = 2131492907;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int cancel_action = 2131492959;
+			// aapt resource value: 0x7f0c0084
+			public const int cancel_action = 2131492996;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int checkbox = 2131492921;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int chronometer = 2131492965;
+			// aapt resource value: 0x7f0c0068
+			public const int checkedTextView1 = 2131492968;
+			
+			// aapt resource value: 0x7f0c0069
+			public const int checkedTextView2 = 2131492969;
+			
+			// aapt resource value: 0x7f0c006a
+			public const int checkedTextView3 = 2131492970;
+			
+			// aapt resource value: 0x7f0c008a
+			public const int chronometer = 2131493002;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
@@ -1519,20 +1531,50 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c000c
 			public const int disableHome = 2131492876;
 			
+			// aapt resource value: 0x7f0c006b
+			public const int editText1 = 2131492971;
+			
+			// aapt resource value: 0x7f0c006c
+			public const int editText2 = 2131492972;
+			
+			// aapt resource value: 0x7f0c006d
+			public const int editText3 = 2131492973;
+			
+			// aapt resource value: 0x7f0c006e
+			public const int editText4 = 2131492974;
+			
 			// aapt resource value: 0x7f0c0043
 			public const int edit_query = 2131492931;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int end = 2131492889;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int end_padder = 2131492970;
+			// aapt resource value: 0x7f0c008f
+			public const int end_padder = 2131493007;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int expand_activities_button = 2131492901;
 			
 			// aapt resource value: 0x7f0c0038
 			public const int expanded_menu = 2131492920;
+			
+			// aapt resource value: 0x7f0c005f
+			public const int gridLayout1 = 2131492959;
+			
+			// aapt resource value: 0x7f0c0070
+			public const int gridLayout2 = 2131492976;
+			
+			// aapt resource value: 0x7f0c0075
+			public const int gridLayout3 = 2131492981;
+			
+			// aapt resource value: 0x7f0c0079
+			public const int gridLayout4 = 2131492985;
+			
+			// aapt resource value: 0x7f0c007d
+			public const int gridLayout5 = 2131492989;
+			
+			// aapt resource value: 0x7f0c0080
+			public const int gridLayout6 = 2131492992;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int home = 2131492868;
@@ -1549,8 +1591,20 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c0026
 			public const int image = 2131492902;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int info = 2131492969;
+			// aapt resource value: 0x7f0c0071
+			public const int imageView1 = 2131492977;
+			
+			// aapt resource value: 0x7f0c0074
+			public const int imageView2 = 2131492980;
+			
+			// aapt resource value: 0x7f0c0076
+			public const int imageView3 = 2131492982;
+			
+			// aapt resource value: 0x7f0c007a
+			public const int imageView4 = 2131492986;
+			
+			// aapt resource value: 0x7f0c008e
+			public const int info = 2131493006;
 			
 			// aapt resource value: 0x7f0c0058
 			public const int latestin = 2131492952;
@@ -1558,20 +1612,32 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c0059
 			public const int latestout = 2131492953;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int line1 = 2131492963;
+			// aapt resource value: 0x7f0c0088
+			public const int line1 = 2131493000;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int line3 = 2131492967;
+			// aapt resource value: 0x7f0c008c
+			public const int line3 = 2131493004;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int linearLayout1 = 2131492963;
+			
+			// aapt resource value: 0x7f0c0066
+			public const int linearLayout2 = 2131492966;
+			
+			// aapt resource value: 0x7f0c006f
+			public const int linearLayout3 = 2131492975;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int listMode = 2131492873;
 			
+			// aapt resource value: 0x7f0c005e
+			public const int listView1 = 2131492958;
+			
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int media_actions = 2131492961;
+			// aapt resource value: 0x7f0c0086
+			public const int media_actions = 2131492998;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int middle = 2131492890;
@@ -1617,6 +1683,9 @@ namespace moneyShow
 			
 			// aapt resource value: 0x7f0c0033
 			public const int scrollView = 2131492915;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int searchView1 = 2131492962;
 			
 			// aapt resource value: 0x7f0c0045
 			public const int search_badge = 2131492933;
@@ -1678,8 +1747,8 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c0017
 			public const int src_over = 2131492887;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int status_bar_latest_event_content = 2131492960;
+			// aapt resource value: 0x7f0c0085
+			public const int status_bar_latest_event_content = 2131492997;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int submit_area = 2131492940;
@@ -1687,17 +1756,41 @@ namespace moneyShow
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int text = 2131492968;
+			// aapt resource value: 0x7f0c008d
+			public const int text = 2131493005;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int text2 = 2131492966;
+			// aapt resource value: 0x7f0c008b
+			public const int text2 = 2131493003;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
 			
 			// aapt resource value: 0x7f0c0050
 			public const int textView1 = 2131492944;
+			
+			// aapt resource value: 0x7f0c007b
+			public const int textView10 = 2131492987;
+			
+			// aapt resource value: 0x7f0c007c
+			public const int textView11 = 2131492988;
+			
+			// aapt resource value: 0x7f0c007e
+			public const int textView12 = 2131492990;
+			
+			// aapt resource value: 0x7f0c007f
+			public const int textView13 = 2131492991;
+			
+			// aapt resource value: 0x7f0c0081
+			public const int textView14 = 2131492993;
+			
+			// aapt resource value: 0x7f0c0082
+			public const int textView15 = 2131492994;
+			
+			// aapt resource value: 0x7f0c0061
+			public const int textView16 = 2131492961;
+			
+			// aapt resource value: 0x7f0c0067
+			public const int textView17 = 2131492967;
 			
 			// aapt resource value: 0x7f0c0051
 			public const int textView2 = 2131492945;
@@ -1706,7 +1799,25 @@ namespace moneyShow
 			public const int textView3 = 2131492946;
 			
 			// aapt resource value: 0x7f0c0064
-			public const int time = 2131492964;
+			public const int textView4 = 2131492964;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int textView5 = 2131492965;
+			
+			// aapt resource value: 0x7f0c0072
+			public const int textView6 = 2131492978;
+			
+			// aapt resource value: 0x7f0c0073
+			public const int textView7 = 2131492979;
+			
+			// aapt resource value: 0x7f0c0077
+			public const int textView8 = 2131492983;
+			
+			// aapt resource value: 0x7f0c0078
+			public const int textView9 = 2131492984;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int time = 2131493001;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int title = 2131492906;
@@ -1870,40 +1981,46 @@ namespace moneyShow
 			public const int Main = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int notification_media_action = 2130968603;
+			public const int Main1 = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int notification_media_cancel_action = 2130968604;
+			public const int Main2 = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int notification_template_big_media = 2130968605;
+			public const int notification_media_action = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int notification_template_big_media_narrow = 2130968606;
+			public const int notification_media_cancel_action = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int notification_template_lines = 2130968607;
+			public const int notification_template_big_media = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int notification_template_media = 2130968608;
+			public const int notification_template_big_media_narrow = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int notification_template_part_chronometer = 2130968609;
+			public const int notification_template_lines = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int notification_template_part_time = 2130968610;
+			public const int notification_template_media = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int select_dialog_item_material = 2130968611;
+			public const int notification_template_part_chronometer = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int select_dialog_multichoice_material = 2130968612;
+			public const int notification_template_part_time = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int select_dialog_singlechoice_material = 2130968613;
+			public const int select_dialog_item_material = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int support_simple_spinner_dropdown_item = 2130968614;
+			public const int select_dialog_multichoice_material = 2130968614;
+			
+			// aapt resource value: 0x7f040027
+			public const int select_dialog_singlechoice_material = 2130968615;
+			
+			// aapt resource value: 0x7f040028
+			public const int support_simple_spinner_dropdown_item = 2130968616;
 			
 			static Layout()
 			{

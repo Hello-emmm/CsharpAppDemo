@@ -1,12 +1,10 @@
 ﻿<Properties StartupConfiguration="{C5DE47D4-A3E5-4091-A8E1-0393E8B6F473}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Resources/ListViewAdapter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Resources/DataHelper/DataBase.cs">
     <Files>
-      <File FileName="MainActivity.cs" Line="143" Column="1" />
-      <File FileName="Resources/DataHelper/DataBase.cs" Line="43" Column="38" />
-      <File FileName="Resources/model/Person.cs" Line="1" Column="1" />
-      <File FileName="Resources/model/Money.cs" Line="13" Column="28" />
-      <File FileName="Resources/DataHelper/DateTimeExtensions.cs" Line="28" Column="3" />
-      <File FileName="Resources/ListViewAdapter.cs" Line="43" Column="1" />
+      <File FileName="Resources/DataHelper/DataBase.cs" Line="371" Column="32" />
+      <File FileName="Resources/DataHelper/DateTimeExtensions.cs" Line="9" Column="4" />
+      <File FileName="Resources/model/Money.cs" Line="8" Column="30" />
+      <File FileName="Resources/model/Budget.cs" Line="22" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
