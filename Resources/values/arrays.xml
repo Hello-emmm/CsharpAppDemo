@@ -1,0 +1,15 @@
+﻿<!--?xml version="1.0" encoding="utf-8"?-->
+<resources>
+    <string-array name="list">
+        <item>收入</item>
+        <item>支出 </item>
+    </string-array>
+        <string-array name="list2">
+        <item>生活餐饮类</item>
+        <item>旅游类 </item>
+        <item>医疗类</item>
+        <item>餐饮类 </item>
+        <item>出行类</item>
+        <item>话费类 </item>
+    </string-array>
+</resources>
