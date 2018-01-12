@@ -3,119 +3,386 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <EditText
-        android:inputType="date"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/todaydate"
-        android:text="日期" />
-    <TextView
-        android:text="本日支出金额"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/todayout" />
-    <TextView
-        android:text="本日收入金额"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/todayin" />
-    <TextView
-        android:text="本月余额"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/todayleft" />
-    <Button
-        android:text="Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addrecord" />
-    <TextView
-        android:text="最近一笔（收入）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/latestin" />
-    <TextView
-        android:text="最近一笔（支出）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/latestout" />
-    <TextView
-        android:text="本周（收入）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/weekin" />
-    <TextView
-        android:text="本周（支出）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/weekout" />
-    <TextView
-        android:text="本月（收入）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/monthin" />
-    <TextView
-        android:text="本月（支出）"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/monthout" />
-<!--    <EditText
-        android:hint="Enter your Name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtName" />
-    <EditText
-        android:hint="Enter your Age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtAge" />
-    <EditText
-        android:hint="Enter your Email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/edtEmail" />
+        android:layout_height="39.0dp"
+        android:id="@+id/gridLayout1"
+        android:background="#EE7600">
+        <Button
+            android:text="返回"
+            android:id="@+id/button1"
+            android:layout_width="36.0dp"
+            android:layout_height="36.0dp"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginBottom="0.0dp"
+            android:background="#EE7600" />
+        <TextView
+            android:text="分类统计"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="100.0dp"
+            android:layout_height="36.0dp"
+            android:layout_marginLeft="100.0dp"
+            android:layout_marginTop="2.0dp"
+            android:id="@+id/textView16" />
+        <SearchView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/searchView1"
+            android:layout_marginLeft="100dp" />
+    </GridLayout>
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
+        android:layout_height="101.0dp"
+        android:id="@+id/linearLayout1"
+        android:layout_marginBottom="0.0dp"
+        android:background="#EE7600">
+        <TextView
+            android:text="666.77"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:layout_weight="1" />
-        <Button
-            android:id="@+id/btnEdit"
-            android:layout_width="wrap_content"
+            android:id="@+id/zongzhichu"
+            android:layout_marginLeft="70px" />
+        <TextView
+            android:text="总支出"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit"
-            android:layout_weight="1" />
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Delete"
-            android:layout_weight="1" />
+            android:id="@+id/textView3"
+            android:layout_marginLeft="70px" />
+        <GridLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="26.5dp"
+            android:layout_marginBottom="0.0dp">
+            <TextView
+                android:text="本月支出"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="0.0dp" />
+            <TextView
+                android:text="(本月支出数值)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width=""
+                android:layout_height="wrap_content"
+                android:id="@+id/benyuezhichu"
+                android:layout_marginLeft="70px"
+                android:layout_marginRight="0.0dp" />
+        </GridLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="26.5dp"
+            android:id="@+id/gridLayout7">
+            <TextView
+                android:text="本月余额"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:layout_marginLeft="70px" />
+            <TextView
+                android:text="（本月余额数值）"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width=""
+                android:layout_height="wrap_content"
+                android:id="@+id/benyueyue"
+                android:layout_marginLeft="70px" />
+        </GridLayout>
     </LinearLayout>
-    <ListView
+    <GridLayout
+        android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listView" />-->
-    <ListView
+        android:layout_height="35.5dp"
+        android:id="@+id/linearLayout2"
+        android:background="#FFF">
+        <TextView
+            android:text="选择月份"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="175.0dp"
+            android:layout_height="35.0dp"
+            android:id="@+id/textView17"
+            android:background="#EE7600"
+            android:textAlignment="center" />
+        <CheckedTextView
+            android:id="@+id/checkedTextView1" />
+        <CheckedTextView
+            android:id="@+id/checkedTextView2" />
+        <CheckedTextView
+            android:id="@+id/checkedTextView3" />
+        <EditText
+            android:inputType="number"
+            android:id="@+id/editText1" />
+        <EditText
+            android:inputType="number"
+            android:id="@+id/editText2" />
+        <EditText
+            android:inputType="numberDecimal"
+            android:id="@+id/editText3" />
+    </GridLayout>
+    <LinearLayout
+        android:orientation="vertical"
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/listView1" />
+        android:layout_height="376.0dp"
+        android:id="@+id/linearLayout3">
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout2"
+            android:background="#fff">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-canyin"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="餐饮类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="120.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/textView6"
+                android:layout_marginRight="45.0dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="200.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/canyinzhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/star" />
+        </GridLayout>
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout3"
+            android:background="#FFF">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-lvyou"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="旅游类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="120.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/textView8"
+                android:layout_marginRight="45.0dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="0.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/lvyouzhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/star" />
+        </GridLayout>
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout4"
+            android:background="#FFF">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-chuxing"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="出行类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="120.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/textView10"
+                android:textColor="#000000"
+                android:layout_marginRight="45.0dp" />
+            <TextView
+                android:text="0.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/chuxingzhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/star" />
+        </GridLayout>
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout5"
+            android:background="#FFF">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-yiliao"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="医疗类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="120.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:textColor="#000000"
+                android:id="@+id/textView12"
+                android:layout_marginRight="45.0dp" />
+            <TextView
+                android:text="200.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/yiliaozhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/imageView2" />
+        </GridLayout>
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout6"
+            android:background="#FFF">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-huafei"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="话费类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="120.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:textColor="#000000"
+                android:id="@+id/textView14"
+                android:layout_marginRight="45.0dp" />
+            <TextView
+                android:text="20.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/huafeizhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/star" />
+        </GridLayout>
+        <GridLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="62.0dp"
+            android:id="@+id/gridLayout6"
+            android:background="#FFF">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:id="@+id/image-shenghuoyongpin"
+                android:layout_width="50.0dp"
+                android:layout_height="50.0dp"
+                android:layout_marginLeft="6.0dp"
+                android:layout_marginTop="6.0dp" />
+            <TextView
+                android:text="生活用品类"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:layout_width="120.0dp"
+                android:textColor="#000000"
+                android:id="@+id/textView14"
+                android:layout_marginRight="45.0dp" />
+            <TextView
+                android:text="20.00"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_height="40.0dp"
+                android:layout_width="80.0dp"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/shenghuoyongpinzhichu"
+                android:textColor="#000000"
+                android:layout_marginRight="0.0dp" />
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="30.0dp"
+                android:layout_height="30.0dp"
+                android:layout_marginLeft="16.0dp"
+                android:layout_marginTop="16.0dp"
+                android:id="@+id/star" />
+        </GridLayout>
+    </LinearLayout>
 </LinearLayout>
