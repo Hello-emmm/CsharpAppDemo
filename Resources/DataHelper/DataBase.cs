@@ -29,7 +29,7 @@ namespace moneyShow.Resources.DataHelper
 		}
 
 		public bool CreateDataBase()
-		{
+	 	{
 			try
 			{
 				using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))
@@ -50,7 +50,7 @@ namespace moneyShow.Resources.DataHelper
 			}
 		}
 
-        public List<Money> SelectMonth(int month){
+        public List<Money> SelectMonth(int month){ 
             try
             {
                 using (var connection = new SQLiteConnection(System.IO.Path.Combine(folder, "Money.db")))

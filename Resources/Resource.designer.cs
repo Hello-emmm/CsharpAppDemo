@@ -52,8 +52,9 @@ namespace moneyShow
 			
 			// aapt resource value: 0x7f050002
 			public const int textView3 = 2131034114;
-			
-			static Id()
+            internal static int benrizhichu;
+
+            static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}

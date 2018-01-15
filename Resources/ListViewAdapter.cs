@@ -71,20 +71,43 @@ namespace moneyShow.Resources
             //txtAge.Text = ""+lstPerson[position].Age;
             //txtEmail.Text = lstPerson[position].Email;
             
-          
+            //homepage面板
             var txtbenrizhichu = view.FindViewById<TextView>(Resource.Id.benrizhichu);
             var txtbenrishouru = view.FindViewById<TextView>(Resource.Id.benrishouru);
 
-            var txtjinrishouru = view.FindViewById<TextView>(Resource.Id.benrishouru);
-            var txtjinrizhichu = view.FindViewById<TextView>(Resource.Id.benrizhichu);
+            var txtjinrishouru = view.FindViewById<TextView>(Resource.TodaySum(0).benrishouru);
+            var txtjinrizhichu = view.FindViewById<TextView>(Resource.TodaySum(1).benrizhichu);
 
-            var txtbenzhoushouru = view.FindViewById<TextView>(Resource.Id.benzhoushouru);
-            var txtbenzhouzhichu = view.FindViewById<TextView>(Resource.Id.benzhouzhichu);
+            var txtbenzhoushouru = view.FindViewById<TextView>(Resource.ThisWeekSum(0).benzhoushouru);
+            var txtbenzhouzhichu = view.FindViewById<TextView>(Resource.ThisWeekSum(1).benzhouzhichu);
 
             var txtbenyueshouru = view.FindViewById<TextView>(Resource.ThisMonthSum(0).benyueshouru);
             var txtbenyuezhichu = view.FindViewById<TextView>(Resource.ThisMonthSum(1).benyuezhichu);
+            //dayaccount面板
+            var txtshou1num = view.FindViewById<TextView>(Resource.Id.shou1num);
+            var txtzhi1num = view.FindViewById<TextView>(Resource.Id.zhi1num);
+            var txtjieyu1num = view.FindViewById<TextView>(Resource.Id.jieyu1num);
 
-       
+            var txtshou2num = view.FindViewById<TextView>(Resource.Id.shou2num);
+            var txtzhi2num = view.FindViewById<TextView>(Resource.Id.zhi2num);
+            var txtjieyu2num = view.FindViewById<TextView>(Resource.Id.jieyu2num);
+
+            var txtshou3num = view.FindViewById<TextView>(Resource.Id.shou3num);
+            var txtzhi3num = view.FindViewById<TextView>(Resource.Id.zhi3num);
+            var txtjieyu3num = view.FindViewById<TextView>(Resource.Id.jieyu3num);
+
+            var txtshou4num = view.FindViewById<TextView>(Resource.Id.shou4num);
+            var txtzhi4num = view.FindViewById<TextView>(Resource.Id.zhi4num);
+            var txtjieyu4num = view.FindViewById<TextView>(Resource.Id.jieyu4num);
+
+            var txtshou5num = view.FindViewById<TextView>(Resource.Id.shou5num);
+            var txtzhi5num = view.FindViewById<TextView>(Resource.Id.zhi5num);
+            var txtjieyu5num = view.FindViewById<TextView>(Resource.Id.jieyu5num);
+
+            var txtshou6num = view.FindViewById<TextView>(Resource.Id.shou5num);
+            var txtzhi6num = view.FindViewById<TextView>(Resource.Id.zhi5num);
+            var txtjieyu6num = view.FindViewById<TextView>(Resource.Id.jieyu5num);
+            
 
             return view;
         }

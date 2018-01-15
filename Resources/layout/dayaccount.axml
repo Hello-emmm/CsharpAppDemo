@@ -67,7 +67,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="72.0dp"
                 android:layout_height="28.0dp"
-                android:id="@+id/zhouzhichu"
+                android:id="@+id/benzhouzhichu"
                 android:layout_marginLeft="70px"
                 android:layout_marginBottom="0.0dp" />
             <TextView
@@ -89,11 +89,11 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="72.0dp"
                 android:layout_height="28.0dp"
-                android:id="@+id/zhoushouru"
+                android:id="@+id/benzhoushouru"
                 android:layout_marginLeft="70px"
                 android:layout_marginBottom="0.0dp" />
             <TextView
-                android:text="本月收入"
+                android:text="本周收入"
                 android:textColor="#555555"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="72.0dp"
