@@ -48,3 +48,6 @@
 /Users/Amanda/Desktop/CsharpAppDemo/obj/Debug/res/layout/list_view_datatemplate.xml
 /Users/Amanda/Desktop/CsharpAppDemo/obj/Debug/R.cs.flag
 /Users/Amanda/Desktop/CsharpAppDemo/obj/Debug/uploadflags.txt
+/Users/caihourong/Desktop/C#/CsharpAppDemo/obj/Debug/moneyShow.csprojResolveAssemblyReference.cache
+/Users/caihourong/Desktop/C#/CsharpAppDemo/obj/Debug/moneyShow.dll
+/Users/caihourong/Desktop/C#/CsharpAppDemo/obj/Debug/moneyShow.pdb
