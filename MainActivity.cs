@@ -17,7 +17,9 @@ namespace moneyShow
     public class MainActivity : Activity
     {
         ListView lstData;
-        List<Person> lstSource = new List<Person>();
+        //List<Person> lstSource = new List<Person>();
+        List<Money> lstMoney = new List<Money>();
+        List<Budget> lstBudget = new List<Budget>();
         DataBase db;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -36,17 +38,26 @@ namespace moneyShow
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             Log.Info("DB_PATH", folder);
 
-            var todayin = FindViewById<TextView>(Resource.Id.todayin);
-            var todayout = FindViewById<TextView>(Resource.Id.todayout);
-            var todayleft = FindViewById<TextView>(Resource.Id.todayleft);
-            var latestin = FindViewById<TextView>(Resource.Id.latestin);
-            var latestout = FindViewById<TextView>(Resource.Id.latestout);
-            var monthin = FindViewById<TextView>(Resource.Id.monthin);
-            var monthout = FindViewById<TextView>(Resource.Id.monthout);
-            var weekin = FindViewById<TextView>(Resource.Id.weekin);
-            var weekout = FindViewById<TextView>(Resource.Id.weekout);
+            var todayin = FindViewById<TextView>(Resource.Id.benrishouru);
+            var todayout = FindViewById<TextView>(Resource.Id.benrizhichu);
+            var monthleft = FindViewById<TextView>(Resource.Id.benyuyue);
 
-            var btnAddRecord = FindViewById<Button>(Resource.Id.addrecord);
+            var latestin = FindViewById<TextView>(Resource.Id.jinrishouru);
+            var latestout = FindViewById<TextView>(Resource.Id.jinrizhichu);
+            var monthin = FindViewById<TextView>(Resource.Id.benyueshouru);
+            var monthout = FindViewById<TextView>(Resource.Id.benyuezhichu);
+            var weekin = FindViewById<TextView>(Resource.Id.benzhoushouru);
+            var weekout = FindViewById<TextView>(Resource.Id.benzhouzhichu);
+
+            //var btnAddRecord = FindViewById<Button>(Resource.Id.addrecord);
+            var btnAdd = FindViewById<Button>(Resource.Id.submit);
+
+
+            var edtType = FindViewById<TextView>(Resource.Id.cateinput);
+            var edtCost = FindViewById<TextView>(Resource.Id.costinput);
+            var edtCategory = FindViewById<TextView>(Resource.Id.cateshouzhi);
+            var edtTime = FindViewById<TextView>(Resource.Id.timeinput);
+
 
 
             LoadData();
@@ -77,6 +88,21 @@ namespace moneyShow
 			//        db.InsertIntoTablePerson(person);
 			//        LoadData();
 			//    }; 
+                btnAdd.Click += delegate
+                {
+                    Money money = new Money()
+                    {
+                        Type = int.Parse(edtType.Text),
+                        Cost = float.Parse(edtCost.Text),
+                        Category = int.Parse(edtCategory.Text),
+                        Time = date.Parse(edtTime.Text)
+                        //Name = edtType.Text,
+                        //Age = int.Parse(edtAge.Text),
+                        //Email = edtEmail.Text
+                    };
+                    db.InsertIntoTableMoney(money);
+                    LoadData();
+                }; 
 
 			//    btnEdit.Click += delegate
 			//    {
