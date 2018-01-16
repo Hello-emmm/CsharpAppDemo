@@ -67,7 +67,7 @@
             <TextView
                 android:text="(本月支出数值)"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width=""
+                android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/benyuezhichu"
                 android:layout_marginLeft="70px"
@@ -87,7 +87,7 @@
             <TextView
                 android:text="（本月余额数值）"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width=""
+                android:layout_width="76dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/benyueyue"
                 android:layout_marginLeft="70px" />
@@ -141,7 +141,7 @@
             android:background="#fff">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-canyin"
+                android:id="@+id/imagecanyin"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"
@@ -183,7 +183,7 @@
             android:background="#FFF">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-lvyou"
+                android:id="@+id/imagelvyou"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"
@@ -225,7 +225,7 @@
             android:background="#FFF">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-chuxing"
+                android:id="@+id/imagechuxing"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"
@@ -267,7 +267,7 @@
             android:background="#FFF">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-yiliao"
+                android:id="@+id/imageyiliao"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"
@@ -309,7 +309,7 @@
             android:background="#FFF">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-huafei"
+                android:id="@+id/imagehuafei"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"
@@ -351,7 +351,7 @@
             android:background="#FFF">
             <ImageView
                 android:src="@android:drawable/ic_menu_gallery"
-                android:id="@+id/image-shenghuoyongpin"
+                android:id="@+id/imageshenghuoyongpin"
                 android:layout_width="50.0dp"
                 android:layout_height="50.0dp"
                 android:layout_marginLeft="6.0dp"

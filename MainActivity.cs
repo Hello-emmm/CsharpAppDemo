@@ -8,6 +8,7 @@ using moneyShow.Resources.DataHelper;
 using moneyShow.Resources;
 using Android.Util;
 
+
 namespace moneyShow
 {
     [Activity(Label = "moneyShow", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -40,7 +41,7 @@ namespace moneyShow
 
             var todayin = FindViewById<TextView>(Resource.Id.benrishouru);
             var todayout = FindViewById<TextView>(Resource.Id.benrizhichu);
-            var monthleft = FindViewById<TextView>(Resource.Id.benyuyue);
+            var monthleft = FindViewById<TextView>(Resource.Id.benyueyue);
 
             var latestin = FindViewById<TextView>(Resource.Id.jinrishouru);
             var latestout = FindViewById<TextView>(Resource.Id.jinrizhichu);
@@ -92,10 +93,11 @@ namespace moneyShow
                 {
                     Money money = new Money()
                     {
-                        Type = int.Parse(edtType.Text),
-                        Cost = float.Parse(edtCost.Text),
-                        Category = int.Parse(edtCategory.Text),
-                        Time = date.Parse(edtTime.Text)
+                        //Type = int.Parse(edtType.Text),
+                        //Cost = float.Parse(edtCost.Text),
+                        //Category = int.Parse(edtCategory.Text),
+                        //Time = date.Parse(edtTime.Text)
+                                   
                         //Name = edtType.Text,
                         //Age = int.Parse(edtAge.Text),
                         //Email = edtEmail.Text
@@ -152,15 +154,20 @@ namespace moneyShow
 			//    };
 			//}
 
-			//private void LoadData(){
-			//    lstSource = db.selectTablePerson();
-			//    var adapter = new ListViewAdapter(this, lstSource);
-			//    lstData.Adapter = adapter;
+   //         private void LoadData(){
+   //             //lstSource = db.selectTablePerson();
+			//    //var adapter = new ListViewAdapter(this, lstSource);
+			//    //lstData.Adapter = adapter;
 			//}
 		}
 		private void LoadData()
 		{
-			//List<Money> list = db.SelectYear(1);
+            var weekin = db.ThisWeekSum();
+            TextView todayin = (TextView)FindViewById<TextView>(Resource.Id.benrishouru);
+            string todayin1 = (string)todayin;
+            todayin.Text = todayin1;
+
+            List<Money> list = db.SelectYear(1);
 			//var adapter = new ListViewAdapter(this, lstSource);
 			//lstData.Adapter = adapter;
 		}

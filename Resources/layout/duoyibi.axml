@@ -50,21 +50,6 @@
             android:minWidth="25px"
             android:minHeight="25px"
             android:background="#bad995">
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_marginLeft="100px"
-                android:layout_marginTop="30px" />
-            <TextView
-                android:textColor="#636363"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="50dp"
-                android:layout_height="28.0dp"
-                android:id="@+id/zhouzhichu"
-                android:layout_marginLeft="70px"
-                android:layout_marginTop="30px"
-                android:layout_marginBottom="20.0dp"
-                android:textSize="25dip"
-                android:text="一般" />
             <EditText
                 android:id="@+id/costinput"
                 android:imeOptions="actionSearch"
@@ -112,8 +97,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="0.0dp"
-                android:background="#ffffffff"
-                android:entries="@arrays/list" />
+                android:background="#ffffffff" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout
@@ -151,8 +135,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="0.0dp"
-                android:background="#ffffffff"
-                android:entries="@arrays/list2" />
+                android:background="#ffffffff" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout
@@ -212,7 +195,6 @@
         android:layout_marginBottom="0.0dp"
         android:background="#ffffffff">
         <Keyboard
-            android:keyWidth="%10p"
             android:keyHeight="50px"
             android:horizontalGap="2px"
             android:verticalGap="2px">

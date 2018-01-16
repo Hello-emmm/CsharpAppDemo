@@ -8,7 +8,8 @@ using moneyShow.Resources.model;
 
 namespace moneyShow.Resources
 {
-    public class ViewHolder : Java.Lang.Object{
+    public class ViewHolder : Java.Lang.Object
+    {
         public TextView benrizhichu { get; set; }
         public TextView benrishouru { get; set; }
         public TextView jinrishouru { get; set; }
@@ -20,8 +21,7 @@ namespace moneyShow.Resources
 
     }
 
-    }
-    public class ListViewAdapter:BaseAdapter
+    public class ListViewAdapter : BaseAdapter
     {
         private Activity activity;
         //private List<Person> lstPerson;
@@ -33,19 +33,20 @@ namespace moneyShow.Resources
         //    this.activity = activity;
         //    this.lstPerson = lstPerson;
         //}
-        
-    public ListViewAdapter(Activity activity, List<Money> lstMoney, List<Budget> lstBudget)
-    {
-        this.activity = activity;
-        this.lstMoney = lstMoney;
-        this.lstBudget = lstBudget;
-    }
+
+        public ListViewAdapter(Activity activity, List<Money> lstMoney, List<Budget> lstBudget)
+        {
+            this.activity = activity;
+            this.lstMoney = lstMoney;
+            this.lstBudget = lstBudget;
+        }
 
 
-        public override int Count{
+        public override int Count
+        {
             get
             {
-                return lstMoney.Count;   
+                return lstMoney.Count;
             }
         }
 
@@ -54,14 +55,14 @@ namespace moneyShow.Resources
             return null;
         }
 
-        //public override long GetItemId(int position)
-        //{
-        //    return lstPerson[position].ID;
-        //}
+        public override long GetItemId(int position)
+        {
+            return lstMoney[position].ID;
+        }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.list_view_dataTemplate, parent,false);
+            var view = convertView ?? activity.LayoutInflater.Inflate(Resource.Layout.list_view_dataTemplate, parent, false);
 
             //var txtName = view.FindViewById<TextView>(Resource.Id.textView1);
             //var txtAge = view.FindViewById<TextView>(Resource.Id.textView2);
@@ -70,19 +71,20 @@ namespace moneyShow.Resources
             //txtName.Text = lstPerson[position].Name;
             //txtAge.Text = ""+lstPerson[position].Age;
             //txtEmail.Text = lstPerson[position].Email;
-            
+
             //homepage面板
             var txtbenrizhichu = view.FindViewById<TextView>(Resource.Id.benrizhichu);
             var txtbenrishouru = view.FindViewById<TextView>(Resource.Id.benrishouru);
 
-            var txtjinrishouru = view.FindViewById<TextView>(Resource.TodaySum(0).benrishouru);
-            var txtjinrizhichu = view.FindViewById<TextView>(Resource.TodaySum(1).benrizhichu);
+            var txtjinrishouru = view.FindViewById<TextView>(Resource.Id.benrishouru);
+            var txtjinrizhichu = view.FindViewById<TextView>(Resource.Id.benrizhichu);
 
-            var txtbenzhoushouru = view.FindViewById<TextView>(Resource.ThisWeekSum(0).benzhoushouru);
-            var txtbenzhouzhichu = view.FindViewById<TextView>(Resource.ThisWeekSum(1).benzhouzhichu);
+            var txtbenzhoushouru = view.FindViewById<TextView>(Resource.Id.benzhoushouru);
+            var txtbenzhouzhichu = view.FindViewById<TextView>(Resource.Id.benzhouzhichu);
 
-            var txtbenyueshouru = view.FindViewById<TextView>(Resource.ThisMonthSum(0).benyueshouru);
-            var txtbenyuezhichu = view.FindViewById<TextView>(Resource.ThisMonthSum(1).benyuezhichu);
+            var txtbenyueshouru = view.FindViewById<TextView>(Resource.Id.benyueshouru);
+            var txtbenyuezhichu = view.FindViewById<TextView>(Resource.Id.benyuezhichu);
+
             //dayaccount面板
             var txtshou1num = view.FindViewById<TextView>(Resource.Id.shou1num);
             var txtzhi1num = view.FindViewById<TextView>(Resource.Id.zhi1num);
@@ -107,7 +109,7 @@ namespace moneyShow.Resources
             var txtshou6num = view.FindViewById<TextView>(Resource.Id.shou5num);
             var txtzhi6num = view.FindViewById<TextView>(Resource.Id.zhi5num);
             var txtjieyu6num = view.FindViewById<TextView>(Resource.Id.jieyu5num);
-            
+
 
             return view;
         }

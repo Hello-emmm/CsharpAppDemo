@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:defaultMinSizeSet="true">
+    android:minHeight="25px">
     <TextView
         android:hint="输入日期"
         android:text=""
@@ -36,7 +35,7 @@
             android:layout_height="match_parent"
             android:id="@+id/benrizhichu"
             android:layout_marginRight="12.0dp"
-            android:textColor="white" />
+            android:textColor="#ffffff" />
         <TextView
             android:hint=""
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -70,7 +69,9 @@
             android:layout_width="77.0dp"
             android:layout_height="match_parent"
             android:id="@+id/benrishouru"
-            android:textColor="white" />
+            android:textColor="#ffffff"
+            android:inputType="text"
+            android:numeric="decimal" />
         <TextView
             android:hint="输入本月余额"
             android:text=""
@@ -81,7 +82,7 @@
             android:layout_marginTop="0.0dp"
             android:textAlignment="center"
             android:paddingTop="10px"
-            android:textColor="white" />
+            android:textColor="#ffffff" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -152,7 +153,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView12"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入今日收入"
                             android:text=""
@@ -170,14 +171,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView13"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入今日支出"
                             android:text=""
                             android:layout_width="112.0dp"
                             android:layout_height="match_parent"
                             android:id="@+id/jinrizhichu"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -228,14 +229,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView14"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入本周收入"
                             android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/benzhoushouru"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                     <LinearLayout
                         android:orientation="horizontal"
@@ -247,14 +248,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView15"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入本周支出"
                             android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/benzhouzhichu"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -303,14 +304,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView16"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入本月收入"
                             android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/benyueshouru"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                     <LinearLayout
                         android:orientation="horizontal"
@@ -322,14 +323,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:id="@+id/textView18"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                         <TextView
                             android:hint="输入本月支出"
                             android:text=""
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:id="@+id/benyuezhichu"
-                            android:textColor="black" />
+                            android:textColor="#000000" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
