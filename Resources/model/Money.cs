@@ -10,6 +10,7 @@ namespace moneyShow.Resources.model
         public int type { get; set; }
         public float cost { get; set; }
 		public int category { get; set; }
+        public string beizhu { get; set; }
 		public DateTime time { get; set; }
         public float current { get; set; }
 
