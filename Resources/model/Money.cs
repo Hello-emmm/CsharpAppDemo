@@ -14,7 +14,10 @@ namespace moneyShow.Resources.model
 		public DateTime time { get; set; }
         public float current { get; set; }
 
-
+        public static implicit operator Money(Money v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
