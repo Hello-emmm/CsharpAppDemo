@@ -60,6 +60,16 @@
                 android:layout_marginTop="40px"
                 android:layout_marginBottom="20.0dp"
                 android:inputType="number" />
+            <EditText
+                android:id="@+id/beizhuinput"
+                android:imeOptions="actionSearch"
+                android:layout_width="100dp"
+                android:layout_height="40.0dp"
+                android:hint="输入备注"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="40px"
+                android:layout_marginBottom="20.0dp"
+                android:inputType="number" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout
@@ -73,7 +83,7 @@
         android:minHeight="25px">
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="60dp"
             android:id="@+id/gridLayout2"
             android:minWidth="25px"
             android:minHeight="25px"
@@ -81,7 +91,7 @@
             <TextView
                 android:textColor="#636363"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="200dp"
+                android:layout_width="180dp"
                 android:layout_height="40.0dp"
                 android:id="@+id/zhouzhichu"
                 android:layout_marginLeft="0px"
@@ -90,14 +100,23 @@
                 android:text=" 收入支出类别"
                 android:autoText="true"
                 android:background="#bad995" />
-            <Spinner
-                android:id="@+id/cateshouzhi"
-                android:layout_width="183dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="0.0dp"
-                android:background="#ffffffff" />
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/radioGroupshouzhi" />
+            <RadioButton
+                android:background="#fffbfbff"
+                android:text="收入"
+                android:id="@+id/shouruButton"
+                android:buttonTint="#ff457328"
+                android:textColor="#ff170404" />
+            <RadioButton
+                android:checked="true"
+                android:background="#fffbfbff"
+                android:text="支出"
+                android:id="@+id/zhichuButton"
+                android:buttonTint="#ff457328"
+                android:textColor="#ff170404" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout
@@ -119,7 +138,7 @@
             <TextView
                 android:textColor="#636363"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="200dp"
+                android:layout_width="180dp"
                 android:layout_height="40.0dp"
                 android:id="@+id/zhouzhichu"
                 android:layout_marginLeft="0px"
@@ -128,14 +147,26 @@
                 android:text=" 类别"
                 android:autoText="true"
                 android:background="#bad995" />
-            <Spinner
-                android:id="@+id/cateinput"
-                android:layout_width="183dp"
-                android:layout_height="40dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="0.0dp"
-                android:background="#ffffffff" />
+            <RadioGroup
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/radioGrouptype" />
+            <RadioButton
+                android:text="生活"
+                android:id="@+id/lifeButton"
+                android:textColor="#ff170404"
+                android:buttonTint="#ff457328" />
+            <RadioButton
+                android:text="出行"
+                android:id="@+id/outButton"
+                android:textColor="#ff170404"
+                android:buttonTint="#ff457328" />
+            <RadioButton
+                android:checked="true"
+                android:text="餐饮"
+                android:id="@+id/foodButtond"
+                android:textColor="#ff170404"
+                android:buttonTint="#ff457328" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout
@@ -184,7 +215,9 @@
                 android:text="提交"
                 android:id="@+id/submit"
                 android:layout_marginLeft="230px"
-                android:layout_marginTop="10px" />
+                android:layout_marginTop="0.0dp"
+                android:background="#ff65a584"
+                android:layout_marginBottom="0.0dp" />
         </GridLayout>
     </LinearLayout>
     <LinearLayout

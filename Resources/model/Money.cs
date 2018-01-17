@@ -12,6 +12,8 @@ namespace moneyShow.Resources.model
 		public int category { get; set; }
 		public DateTime time { get; set; }
         public float current { get; set; }
-	}
+
+
+    }
 }
 

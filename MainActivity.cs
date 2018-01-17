@@ -7,7 +7,7 @@ using moneyShow.Resources.model;
 using moneyShow.Resources.DataHelper;
 using moneyShow.Resources;
 using Android.Util;
-
+using System;
 
 namespace moneyShow
 {
@@ -23,13 +23,13 @@ namespace moneyShow
         List<Budget> lstBudget = new List<Budget>();
         DataBase db;
 
-        protected override void OnCreate(Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstancesState)
         {
-            base.OnCreate(savedInstanceState);
+            //base.OnCreate(savedInstanceState);
 
 
             // Set our view from the "main" layout resource
-            SetContentView(Resource.Layout.Main);
+            SetContentView(Resource.Layout.duoyibi);
 
             // Create DataBase
             db = new DataBase();
@@ -39,7 +39,7 @@ namespace moneyShow
             string folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             Log.Info("DB_PATH", folder);
 
-            var todayin = FindViewById<TextView>(Resource.Id.benrishouru);
+            //var todayin = FindViewById<TextView>(Resource.Id.benrishouru);
             var todayout = FindViewById<TextView>(Resource.Id.benrizhichu);
             var monthleft = FindViewById<TextView>(Resource.Id.benyueyue);
 
@@ -54,9 +54,9 @@ namespace moneyShow
             var btnAdd = FindViewById<Button>(Resource.Id.submit);
 
 
-            var edtType = FindViewById<TextView>(Resource.Id.cateinput);
+//            var edtType = FindViewById<TextView>(Resource.Id.cateinput);
             var edtCost = FindViewById<TextView>(Resource.Id.costinput);
-            var edtCategory = FindViewById<TextView>(Resource.Id.cateshouzhi);
+//            var edtCategory = FindViewById<TextView>(Resource.Id.cateshouzhi);
             var edtTime = FindViewById<TextView>(Resource.Id.timeinput);
 
 
@@ -93,14 +93,10 @@ namespace moneyShow
                 {
                     Money money = new Money()
                     {
-                        //Type = int.Parse(edtType.Text),
-                        //Cost = float.Parse(edtCost.Text),
-                        //Category = int.Parse(edtCategory.Text),
-                        //Time = date.Parse(edtTime.Text)
-                                   
-                        //Name = edtType.Text,
-                        //Age = int.Parse(edtAge.Text),
-                        //Email = edtEmail.Text
+                        //type = int.Parse(edtType.Text),
+                        cost = float.Parse(edtCost.Text),
+                        //category = int.Parse(edtCategory.Text),
+                        time = DateTime.Now
                     };
                     db.InsertIntoTableMoney(money);
                     LoadData();
@@ -155,9 +151,9 @@ namespace moneyShow
 			//}
 
    //         private void LoadData(){
-   //             //lstSource = db.selectTablePerson();
-			//    //var adapter = new ListViewAdapter(this, lstSource);
-			//    //lstData.Adapter = adapter;
+   //             lstSource = db.selectTablePerson();
+			//    var adapter = new ListViewAdapter(this, lstSource);
+			//    lstData.Adapter = adapter;
 			//}
 		}
 		private void LoadData()

@@ -299,6 +299,7 @@ namespace moneyShow.Resources.DataHelper
                     }else{
                         money.current = QueryBudget()[2] - money.cost;
                     }
+                    money.time = now;
                     UpdateBudgetCurrent(money.current); // 改变Budget表的Current值
 		            connection.Insert(money);
 		            return true;
